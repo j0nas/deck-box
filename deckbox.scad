@@ -31,10 +31,9 @@ NARROW_WALL_T = 1.86;  // narrow section / lid wall thickness
 FLOOR_T       = 1.86;  // base bottom thickness
 CEILING_T     = 1.86;  // lid top thickness
 
-SEAM_Z        = 20.0;  // nominal base shoulder height above cavity floor
-VERTICAL_GAP  = 1.5;   // intentional vertical gap between lid bottom and base top
-WAVE_AMP      = 8.0;   // half-height of the interlocking seam band
-LID_BOTTOM_Z  = SEAM_Z + VERTICAL_GAP;  // 21.5 — default lid bottom; teeth extend below
+SEAM_Z        = 20.0;  // base shoulder height above cavity floor
+VERTICAL_GAP  = 1.5;   // visible vertical gap between base top and lid bottom
+LID_BOTTOM_Z  = SEAM_Z + VERTICAL_GAP;  // 21.5
 
 H_TOL = 0.4;           // horizontal print tolerance (lid cavity larger per side)
 
