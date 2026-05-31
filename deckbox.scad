@@ -35,7 +35,7 @@ SEAM_Z        = 20.0;  // base shoulder height above cavity floor
 VERTICAL_GAP  = 1.5;   // visible vertical gap between base top and lid bottom
 LID_BOTTOM_Z  = SEAM_Z + VERTICAL_GAP;  // 21.5
 
-H_TOL = 0.4;           // horizontal print tolerance (lid cavity larger per side)
+H_TOL = 0.3;           // horizontal print tolerance (lid cavity larger per side)
 
 // Decorative window dimensions — sized to preserve a 5.8 mm frame border
 // on each side of the cavity (so WIN = CAV − 11.6).
@@ -94,8 +94,8 @@ module window_cut(w, d, h, r, z_bot) {
 // Snap-fit locking bumps: small spheres on the narrow section's outer wall
 // at LOCK_BUMP_Z. The lid has matching spherical cavities — when assembled,
 // the lid flexes slightly over the bumps and clicks into place.
-LOCK_BUMP_R   = 0.7;    // bump protrusion radius (mm)
-LOCK_CAV_R    = 1.0;    // matching cavity radius (gives ~0.3mm play once snapped)
+LOCK_BUMP_R   = 0.9;    // bump protrusion radius (mm) — engagement = R − H_TOL
+LOCK_CAV_R    = 0.95;   // matching cavity radius (≈0.05mm play once snapped)
 LOCK_BUMP_Z   = (SEAM_Z + CAV_H) / 2;  // mid-height of the narrow section (≈45)
 
 // One bump per LONG side only (at y = ±NARROW_D/2). Squeezing the short

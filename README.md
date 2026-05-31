@@ -31,8 +31,8 @@ Common parameters to tune in `deckbox.scad`:
 | Param | Default | Effect |
 |---|---|---|
 | `CAV_W`, `CAV_D`, `CAV_H` | 94.3, 71.3, 81.0 | Cards cavity dimensions (mm). Resize for different sleeves or stack heights. |
-| `H_TOL` | 0.4 | Lid-over-base horizontal slide-fit clearance per side. Loosen on tight printers, tighten on sloppy ones. |
-| `LOCK_BUMP_R` | 0.7 | Snap-fit bump protrusion. Smaller = easier release, looser hold. |
+| `H_TOL` | 0.3 | Lid-over-base horizontal slide-fit clearance per side. Loosen on tight printers, tighten on sloppy ones. Also reduces snap-fit bump engagement by the same amount. |
+| `LOCK_BUMP_R` | 0.9 | Snap-fit bump protrusion. Effective engagement = `LOCK_BUMP_R − H_TOL`. Smaller = easier release, looser hold. |
 | `WIDE_WALL_T`, `NARROW_WALL_T` | 3.92, 1.86 | Wall thicknesses for the base wide and narrow sections. |
 
 If you change `CAV_W`, `CAV_D`, `CAV_H`, `WIDE_WALL_T`, `NARROW_WALL_T`, `FLOOR_T`, `CEILING_T`, `SEAM_Z`, or `VERTICAL_GAP`, mirror the same value into `seam.py` — the Voronoi geometry needs to align with the wall geometry.
